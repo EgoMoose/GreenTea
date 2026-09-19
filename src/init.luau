@@ -43,6 +43,7 @@ export.Rect = GreenTea.Rect
 export.Region3 = GreenTea.Region3
 export.BrickColor = GreenTea.BrickColor
 export.Font = GreenTea.Font
+export.Content = GreenTea.Content
 
 export.Enum = GreenTea.Enum
 export.EnumItem = GreenTea.EnumItem

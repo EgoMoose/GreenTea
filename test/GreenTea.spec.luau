@@ -164,11 +164,13 @@ basicTest({
 	values = { true, false },
 })
 
-local function basicBasicTest(name, value)
+local function basicBasicTest(name, ...)
+	local values = { ... }
+
 	basicTest({
 		kind = name,
 		fn = gt[name],
-		values = { value },
+		values = values,
 	})
 
 	basicTest({
@@ -176,7 +178,7 @@ local function basicBasicTest(name, value)
 		fn = function()
 			return gt.isTypeof(name)
 		end,
-		values = { value },
+		values = values,
 		describeName = `gt.basic({name})`,
 	})
 end
@@ -192,8 +194,7 @@ basicBasicTest("Ray", Ray.new(Vector3.new(0, 0, 0), Vector3.new(0, 0, 1)))
 basicBasicTest("Rect", Rect.new())
 basicBasicTest("Region3", Region3.new(Vector3.new(0, 0, 0), Vector3.new(1, 1, 1)))
 basicBasicTest("BrickColor", BrickColor.new("Bright blue"))
-basicBasicTest("Content", Content.fromAssetId(123))
-basicBasicTest("Content", Content.none)
+basicBasicTest("Content", Content.fromAssetId(123), Content.none)
 
 basicTest({
 	kind = "nil",

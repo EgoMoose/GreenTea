@@ -1286,7 +1286,7 @@ end
 --- @function types not listed here
 --- A few methods are not listed in the docs so that they don't clutter with basic types.\
 --- Here's a list: userdata, Vector2, vector, Vector3, CFrame, Color3, UDim, UDim2,
---- Ray, Rect, Region3, BrickColor, Font, Enum, EnumItem.\
+--- Ray, Rect, Region3, BrickColor, Font, Content, Enum, EnumItem.\
 --- For the most part, any Luau type you'd naturally write likely also exists under GreenTea.
 --- Less common types are excluded (for now) to not clutter the library.
 --- For the ones that don't exist, you can usually use `isTypeof` or `isType`.

@@ -99,6 +99,7 @@ implicitConstructors.Vector2 = basicType("Vector2")
 implicitConstructors.Vector2int16 = basicType("Vector2int16")
 implicitConstructors.Vector3 = basicType("Vector3")
 implicitConstructors.Vector3int16 = basicType("Vector3int16")
+implicitConstructors.Content = basicType("Content")
 
 t.type = function(typename: string): any
 	return GreenTea.isType(typename)
