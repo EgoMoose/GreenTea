@@ -928,6 +928,7 @@ GreenTea.Rect = newBasicType("Rect") :: () -> Rect
 GreenTea.Region3 = newBasicType("Region3") :: () -> Region3
 GreenTea.BrickColor = newBasicType("BrickColor") :: () -> BrickColor
 GreenTea.Font = newBasicType("Font") :: () -> Font
+GreenTea.Content = newBasicType("Content") :: () -> Content
 
 GreenTea.Enum = newBasicType("Enum") :: () -> Enum
 GreenTea.EnumItem = newBasicType("EnumItem") :: () -> EnumItem
