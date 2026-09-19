@@ -493,16 +493,8 @@ function Type.type(self: any): ...any
 	return self
 end
 
-local isStringUnicode
-
-if utf8.graphemes then
-	function isStringUnicode(str: string)
-		return pcall(utf8.graphemes, str) == true
-	end
-else
-	function isStringUnicode(str: string)
-		return utf8.len(str) ~= nil
-	end
+local function isStringUnicode(str: string)
+	return utf8.len(str) ~= nil
 end
 
 local function truncate(count: number, str: string)
@@ -1147,6 +1139,8 @@ end
 local function countGraphemes(str: string): number?
 	if #str == 0 then
 		return 0
+	elseif not isStringUnicode(str) then
+		return nil
 	else
 		local count = 0
 		for _ in utf8.graphemes(str) do
