@@ -2,11 +2,9 @@
 
 ## Unreleased
 
-- Fix `GreenTea.string({ unicode = true })` accepting invalid UTF-8. The check called
-  `utf8.graphemes` inside a `pcall` without iterating it, which never validates.
-  It now uses `utf8.len`.
-- Fix `countGraphemes` never returning `nil` for invalid UTF-8, so
-  `GreenTea.string({ graphemes = ... })` reports a proper error instead of throwing.
+- Fix `GreenTea.string({ unicode = true })` accepting invalid UTF-8. The check called `utf8.graphemes` inside a `pcall` without iterating it, which never validates. It now uses `utf8.len`.
+- Fix `countGraphemes` never returning `nil` for invalid UTF-8, so `GreenTea.string({ graphemes = ... })` reports a proper error instead of throwing.
+- Add `GreenTea.Content`.
 
 ## 0.4.11
 
